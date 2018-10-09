@@ -44,10 +44,6 @@ The objectives of this mini-project are:
   ```
   
   ```
-  make install
-  ```
-  
-  ```
   make run
   ```
   
