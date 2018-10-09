@@ -23,7 +23,7 @@ The objectives of this mini-project are:
 ### Assignment ###
 * Fork this repository to create your own repository on Bitbucket. (Read the documentation as needed, and create an account on Bitbucket if you don't have one. You should've already done finished this as part of Project 0.) 
 * Clone your repository onto the machine you want to work on.
-* Add the following functionality in pageserver.py. (a) If URL ends with name.html or name.css (i.e., if path/to/name.html is in document path (from DOCROOT)), send content of name.html or name.css with proper http response. (b) If name.html is not in current directory Respond with 404 (not found). (c) If a page starts with one of the symbols(~ // ..), respond with 403 forbidden error. For example, url= localhost:5000/..name.html or /~name.html would give 403 forbidden error.
+* Add the following functionality in pageserver.py. (a) If URL ends with `name.html` or `name.css` (i.e., if `path/to/name.html` is in document path (from DOCROOT)), send content of `name.html` or `name.css` with proper http response. (b) If `name.html` is not in current directory Respond with 404 (not found). (c) If a page starts with one of the symbols(~ // ..), respond with 403 forbidden error. For example, `url= localhost:5000/..name.html` or `/~name.html` would give 403 forbidden error.
 * Make and test your changes. Use both automated tests (the script in the 'tests' directory) and some manual tests.
 * Revise this README.md file: Erase what is no longer relevant and add identifying information. If you have concerns about adding your email ID, let the instructors know.
   
@@ -31,7 +31,7 @@ The objectives of this mini-project are:
   ## Author: John Doe, jdoe@uoregon.edu ##
   ```
   
-* Copy the credentials-skel.ini file to credentials.ini, then edit it to contain correct information including your Bitbucket repository URL. credentials.ini should NOT be under version control (exclude it using your .gitignore file)
+* Copy the credentials-skel.ini file to credentials.ini, then edit it to contain correct information including your Bitbucket repository URL. `credentials.ini` should NOT be under version control (exclude it using your .gitignore file)
 * Commit and push ALL your changes to github (except those not under revision control)
 * Test deployment in other environments. Deployment should work "out of the box" with this command sequence: 
 
@@ -54,8 +54,8 @@ The objectives of this mini-project are:
   ```
   
 * Alternatively, use the script under "tests" folder to test the expected outcomes in an automated fashion. It is accompanied by README file and comments (inside tests.sh) explaining how to test your code.
-* Check and revise your "credentials/credentials.ini" file. My grading robots will read this. Be precise. My grading robots are not very good at guessing what you meant to write.
-* Turn in the credentials.ini file in Canvas. My grading robots will use this file to access your github repository.   
+* Check and revise your `credentials/credentials.ini` file. My grading robots will read this. Be precise. My grading robots are not very good at guessing what you meant to write.
+* Turn in the `credentials.ini` file in Canvas. My grading robots will use this file to access your github repository.   
 
 ### Who do I talk to? ###
 
