@@ -57,6 +57,16 @@ The objectives of this mini-project are:
 * Check and revise your `credentials/credentials.ini` file. My grading robots will read this. Be precise. My grading robots are not very good at guessing what you meant to write.
 * Turn in the `credentials.ini` file in Canvas. My grading robots will use this file to access your github repository.   
 
+### Grading Rubric ###
+
+* Your code works as expected: 100 points
+
+* For every wrong functionality (i.e., (a), (b), and (c) above), 20 points will be docked off. 
+
+* If none of the functionalities work, 40 points will be given. Assuming the credentials.ini is submitted with the correct URL of your repo.
+
+* If credentials.ini is missing, 0 will be assigned.
+
 ### Who do I talk to? ###
 
 * Maintained by Ram Durairajan, Steven Walton
