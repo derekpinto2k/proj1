@@ -44,13 +44,13 @@ The objectives of this mini-project are:
   ```
   
   ```
-  make run
+  make run or make start
   ```
   
   *test it with a browser now, while your server is running in a background process*
 
   ```
-  make kill 
+  make stop
   ```
   
 * Alternatively, use the script under "tests" folder to test the expected outcomes in an automated fashion. It is accompanied by README file and comments (inside tests.sh) explaining how to test your code.
