@@ -12,7 +12,7 @@
   located in ./pages  (where '.' is the directory from which this
   program is run).
 """
-
+import os
 import config    # Configure from .ini files and command line
 import logging   # Better than print statements
 logging.basicConfig(format='%(levelname)s:%(message)s',
@@ -90,9 +90,44 @@ def respond(sock):
     log.info("Request was {}\n***\n".format(request))
 
     parts = request.split()
+
     if len(parts) > 1 and parts[0] == "GET":
-        transmit(STATUS_OK, sock)
-        transmit(CAT, sock)
+
+        #Check if request for file was given
+        if len(parts[1]) > 1:
+
+            #This checks if file request is invalid
+            forbidden = False
+            for itm in ['~', '//', '..']:
+                if itm in parts[1]:
+                    forbidden = True
+
+            #if request is invalid, transmit error 403
+            if forbidden:
+                transmit(STATUS_FORBIDDEN, sock)
+
+            #if request is valid, try to find if file exists
+            else:
+                fname = os.path.join('./pages', parts[1][1:])
+                file_found = os.path.isfile(fname)
+
+                #if file exists, open file and transmit contents
+                if file_found:
+                    with open(fname, 'r') as f:
+                        f_content = f.read()
+            
+                    transmit(STATUS_OK, sock)
+                    transmit(f_content, sock)
+
+                #if file doesn't exist, transmit error 404
+                elif not file_found:
+                    transmit(STATUS_NOT_FOUND, sock)
+
+        #if no file was specificed, transmit CAT
+        else:
+            transmit(STATUS_OK, sock)
+            transmit(CAT, sock)
+   
     else:
         log.info("Unhandled request: {}".format(request))
         transmit(STATUS_NOT_IMPLEMENTED, sock)
